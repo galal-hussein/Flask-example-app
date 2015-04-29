@@ -2,6 +2,8 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask.ext.script import Manager, Server
 from flask.ext.pymongo import PyMongo
+import socket
+
 
 # MongoDB Settings
 MONGO_HOST = "104.155.92.47"
@@ -33,7 +35,7 @@ manager.add_command("runserver", Server(
 def cntr():
     mongo.db.rancher.update({"Project" : "Rancher"}, {"$inc" : {"pageviews" : 1}}, True)
     posts = mongo.db.rancher.find({"Project":"Rancher"})[0]
-    return render_template('index.html', posts=posts)
+    return render_template('index.html', posts=posts, hostname=socket.gethostname())
 
 if __name__ == '__main__':
     manager.run()
