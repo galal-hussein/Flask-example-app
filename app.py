@@ -8,7 +8,7 @@ import socket
 # MongoDB Settings
 #Just For Testing
 #MONGO_HOST = "104.155.92.47"
-MONGO_HOST = "10.42.54.243"
+MONGO_HOST = "10.42.183.103"
 MONGO_PORT = 27017
 MONGO_DBNAME = "counter"
 MONGO_REPLICA_SET = "rancher"
