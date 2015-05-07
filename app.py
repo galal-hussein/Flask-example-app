@@ -11,7 +11,7 @@ import socket
 MONGO_HOST = "10.42.183.103"
 MONGO_PORT = 27017
 MONGO_DBNAME = "counter"
-MONGO_REPLICA_SET = "rancher"
+#MONGO_REPLICA_SET = "rancher"
 
 SECRET_KEY = "KeepThisS3cr3t"
 SITE_WIDTH = 800
