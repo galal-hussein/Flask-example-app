@@ -39,5 +39,9 @@ def cntr():
     posts = mongo.db.rancher.find({"Project":"Rancher"})[0]
     return render_template('index.html', posts=posts, hostname=socket.gethostname())
 
+@app.route("/healthcheck")
+def healthcheck():
+    return "200 OK"
+
 if __name__ == '__main__':
     manager.run()
