@@ -41,7 +41,7 @@ def cntr():
 
 @app.route("/healthcheck")
 def healthcheck():
-    return "200 OK"
+    return "200 OK From "+socket.gethostname()
 
 if __name__ == '__main__':
     manager.run()
